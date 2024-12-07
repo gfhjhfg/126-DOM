@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        .top {
+            width: 40%;
+            margin: 20px auto;
+            /* border: 1px solid #000; */
+            display: flex;
+            justify-content: center;
+        }
+        .top .top-r {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            /* background-color: red; */
+            border: 1px solid #eee;
+            /* padding: 0 10px 10px; */
+        }
+        .top .top-r p {
+            width: 120px;
+            text-align: center;
+            margin: 5px auto;
+            color: orangered;
+        }
+
+        .top .top-l img{
+            width: 25px;
+            height: 25px;
+            padding: 5px;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .top .top-r img{
+            width: 100px;
+            height: 100px;
+            padding: 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-l">
+            <img onclick="close_none()" src="../03-课后作业/images/wrong.png" alt="">
+        </div>
+        <div class="top-r">
+            <p>手机淘宝</p>
+            <img id="img2" src="../03-课后作业/images/tao.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var img2=document.getElementById("img2")
+        function close_none(){
+            img2.style.display='none';
+            // img2.style.height=0;
+        }
+    </script>
+</body>
+</html>

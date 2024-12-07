@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        div img{
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2 onclick="rgfdgd()"></h2>
+        <h1></h1>
+        <img src="" alt="">
+    </div>
+    <script>
+        function updateTime() {
+        var now=new Date();
+        var hours=String(now.getHours()).padStart(2, '0');
+        var minutes=String(now.getMinutes()).padStart(2, '0');
+        var seconds=String(now.getSeconds()).padStart(2, '0');
+        var a = `${hours}:${minutes}:${seconds}`;
+        // console.log(now)
+        // console.log(hours)
+        // console.log(minutes)
+        // console.log(s)
+        // hours=12
+        // console.log(hours+":"+minutes+":"+seconds)
+        // console.log(a);
+
+        // var h1=["上午好","中午好","下午好","晚上好"]
+        // var src=["../03-课后作业/images/0.png","../03-课后作业/images/1.png","../03-课后作业/images/2.png","../03-课后作业/images/3.png"]
+
+        var span=document.querySelector("h2")
+        // span.innerHTML="现在是北京时间：<span>"+hours+":"+minutes+":"+seconds+"</span>"
+        span.innerHTML="现在是北京时间：<span>"+a+"</span>"
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        var now=new Date();
+        var hours=String(now.getHours()).padStart(2, '0');
+        var time =document.querySelector("h1");
+        var img =document.querySelector("img")
+        if(hours>=0&&hours<12){
+            time.innerHTML="上午好";
+            img.src="../03-课后作业/images/0.png"
+        }
+        if(hours>=12&&hours<14){
+            time.innerHTML="中午好";
+            img.src="../03-课后作业/images/1.png"
+        }
+        if(hours>=14&&hours<18){
+            time.innerHTML="下午好";
+            img.src="../03-课后作业/images/2.png"
+        }
+        if(hours>=18&&hours<24){
+            time.innerHTML="晚上好";
+            img.src="../03-课后作业/images/3.png"
+        }
+
+        // function a(){
+        //     hours++;
+        //     console.log(hours)
+        // }
+    </script>
+</body>
+</html>

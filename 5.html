@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        .all{
+            width: 30%;
+            /* border: 1px solid #eee; */
+            margin: 20px auto;
+        }
+
+        .all .add {
+            text-align: center;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: skyblue;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <!-- 节点.checked == true   节点.checked = false -->
+    <div class="all">
+        <div class="add">
+            1.<input type="checkbox"><br>
+            2.<input type="checkbox"><br>
+            3.<input type="checkbox"><br>
+            4.<input type="checkbox"><br>
+            5.<input type="checkbox"><br>
+        </div>
+        <button onclick="sec()">全 选</button>
+        <button onclick="none()">不 选</button>
+        <button onclick="res()">反 选</button>
+    </div>
+
+    <script>
+        // var input=document.querySelectorAll(".add");
+        // // add.innerHTML='<h1>3</h1>';
+        // console.log(input[0])
+        // function sec(){
+        //     for(var i=0;i<input.length;i++){
+        //         console.log(24)
+        //         var str='<input type="checkbox" checked><br>'
+        //         str=str.repeat(2)
+        //         input[i].innerHTML=str
+        //     }
+        // }
+
+        var input=document.querySelectorAll("input");
+        // add.innerHTML='<h1>3</h1>';
+        console.log(input)
+        function sec(){
+            for(var i=0;i<input.length;i++){
+                console.log(2)
+                input[i].checked=true
+            }
+        }
+        function none(){
+            for(var i=0;i<input.length;i++){
+                console.log(4)
+                input[i].checked=false
+            }
+        }
+
+        function res() {
+            for (var i = 0; i < input.length; i++) {
+                console.log(4)
+                input[i].checked =!input[i].checked;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+        .all {
+            width: 60%;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            /* display: flex; */
+            /* justify-content: center; */
+            text-align: center;
+        }
+
+        .all div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 30px;
+        }
+        .all input {
+            outline: none;
+            margin-top: 3px;
+            height: 30px;
+        }
+
+        .all div span {
+            display: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <h2>用户如果离开密码框，里面输入个数不是6~16，<br>则提示错误信息，否则提示输入正确信息</h2>
+        <div>
+            <span style="color: red;display: block;">*</span>
+            设置密码：<input type="password" name="" id="" onblur="aa()">
+            &nbsp;<img src="" alt="">&nbsp;
+            <span style="color: red;">密码输入不符合要求，请重新输入</span>
+            <span style="color: greenyellow;">密码输入符合要求</span>
+        </div>
+    </div>
+
+    <script>
+        function aa(){
+            var input=document.querySelector("input");
+            var img=document.querySelector("img");
+            var span=document.querySelectorAll("span");
+            if(input.value.length>5&&input.value.length<17){
+                img.src='../03-课后作业/images/right.png';
+                img.style.width="30px"
+                span[0].style.display='none'
+                span[1].style.display='block'
+            }else{
+                img.src='../03-课后作业/images/wrong.png';
+                img.style.width="30px"
+                span[0].style.display='block'
+                span[1].style.display='none'
+            }
+        }
+    </script>
+</body>
+</html>

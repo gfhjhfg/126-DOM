@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <style>
+        .all{
+            width: 400px;
+            margin: 0 auto;
+            border: 1px solid #eee;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .all .unit {
+            width: 100px;
+            border: 1px solid #eee;
+            box-sizing: border-box;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .all .unit img {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        .all .unit div {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            /* border: 1px solid #000; */
+            background-image:url(../03-课后作业/images/sprite.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-size: 100px 100px; */
+            /* background-position: 13px 14px; */
+            /* background-position: 0px -44px; */
+            /* background-position: 0px -92px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+        <div class="unit">
+            <div class="u1"></div>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        var u1=document.querySelectorAll(".unit");
+        var des=["充话费","旅行","车险","游戏","彩票","电影","酒店","理财"]
+        for(var i=0;i<u1.length;i++){
+            // var unit=document.querySelectorAll(unit);            
+            // u1[i].innerHTML=''
+            u1[i].innerHTML='<div class="u1" style="background-position:0 '+ (-92*(i)) +'px\"></div><p>'+des[i]+'</p>'
+            // unit.style.backgroundPosition="0 i*44px"
+            // console.log(u1.innerHTML)
+        }
+    </script>
+</body>
+</html>
